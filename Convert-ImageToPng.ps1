@@ -91,7 +91,7 @@ if ($args.Count -gt 0)
     if ($args[0] -is [System.IO.FileSystemInfo])
     {
         # ls | ThisScript.ps1
-        $args | ForEach-Object { $_.FullName } | Convert-Jpeg2Png -odir $Outdir
+        $args | ForEach-Object { $_.FullName } | Convert-ImageToPng -odir $Outdir
     }
     else
     {
