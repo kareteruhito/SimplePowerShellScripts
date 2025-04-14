@@ -58,7 +58,7 @@ function Convert-ImageToPng
             $outFile = (Join-Path $odir ($baseName+".png"))
 
             $bmp = [System.Drawing.Image]::FromFile($path)
-            Write-Output $outFile
+            Write-Output $path
             $bmp.Save($outFile, [System.Drawing.Imaging.ImageFormat]::Png)
             $bmp.Dispose(); $bmp = $null
         }
